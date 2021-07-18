@@ -1,0 +1,21 @@
+.grid {
+    margin: 0 auto;
+    width: 60vw;
+    height: 70vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.item {
+    width: 33.3%;
+    height: 23.33333vh;
+    box-sizing: border-box;
+}
+
+.picture {
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    border: 1px solid #ccc;
+}
