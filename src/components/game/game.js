@@ -35,6 +35,11 @@ export function Game() {
         }, 3000)
     }
 
+    function restartGame() {
+        clearTimeout(deleteTimeout.current);
+        pageChanger({value: 2, level});
+    }
+
     function moveToResult() {
         result.current = Math.floor(result.current * 100 / level);
         setResultPage("is-result");
@@ -45,7 +50,7 @@ export function Game() {
         if (resultPage === "not-result") {
             return <div className='btn-container'>
                 <button onClick={() => setVision("cleanup")} disabled={disableBtn === "disabled-all"}>Назад</button>
-                <button disabled={disableBtn === "disabled-all"}>Начать заново</button>
+                <button onClick={restartGame} disabled={disableBtn === "disabled-all"}>Начать заново</button>
                 <button onClick={() => moveToResult()} disabled={disableBtn !== "enable"}>Готово</button>
             </div>
         }
@@ -54,6 +59,10 @@ export function Game() {
             <button onClick={() => pageChanger(0)}>Выбрать уровень</button>
         </div>
     }
+
+    useEffect(() => {
+        console.log("Hello");
+    }, [])
 
     useEffect(() => {
         if (vision === 'visible') {

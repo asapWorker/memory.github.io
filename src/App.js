@@ -12,6 +12,9 @@ function App() {
         switch (page.value) {
             case 1:
                 return <Game/>
+            case 2:
+                setTimeout(() => setPage({...page, value: 1}), 0)
+                return <div/>
             default:
                 return <Menu/>
         }
