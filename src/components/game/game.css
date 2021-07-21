@@ -1,15 +1,37 @@
 .game-container {
     display: flex;
+    height: 90vh;
+}
+
+.game-container.not-result {
+    justify-content: center;
+}
+
+.game-container.is-result {
+    justify-content: space-between;
+}
+
+.game-inner {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 80vh;
+    height: 100%;
+    width: 100%;
     padding: 30px 0px;
+    box-sizing: border-box;
 }
 
 .btn-container {
     display: flex;
-    width: 70vw;
+    width: 70%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.result-btn-container {
+    display: flex;
+    width: 70%;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -17,6 +39,7 @@
 button {
     height: 6vh;
     width: 23.33333%;
+    z-index: 1;
 }
 
 /* Loader */
@@ -79,10 +102,16 @@ button {
     100%{opacity: 0;}
 }
 
-/* Cover */
-.cover {
+/* Error */
+.error-wrapper {
     position: absolute;
-    width: 100%;
-    height: 70vh;
-    background-color: #fff;
+    top: 35%;
+}
+
+.error-content {
+    width: 50vw;
+    margin: auto;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #5a5b63;
 }

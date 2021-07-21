@@ -1,12 +1,12 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import './App.css';
 import {Menu} from './components/menu/menu.js'
 import {Game} from './components/game/game'
 import {AppProvider} from "./AppContext";
+import {Result} from "./components/result/result";
 
 function App() {
     const [page, setPage] = useState({value: 0});
-
 
     function renderComponent() {
         switch (page.value) {
