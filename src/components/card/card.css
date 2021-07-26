@@ -20,6 +20,21 @@
     height: 20%;
 }
 
+.card-level_6 {
+    width: 33.33333%;
+    height: 50%;
+}
+
+.card-level_12 {
+    width: 16.66666%;
+    height: 50%;
+}
+
+.card-level_21 {
+    width: 14.28%;
+    height: 33.33333%;
+}
+
 .card-inner {
     position: relative;
     display: flex;
@@ -29,18 +44,70 @@
 }
 
 .inner-level_9 {
-    width: 20vh;
-    height: 20vh;
+    width: 21vh;
+    height: 21vh;
+    max-width: 21vw;
+    max-height: 21vw;
 }
 
 .inner-level_16 {
     width: 15vh;
     height: 15vh;
+    max-width: 15vw;
+    max-height: 15vw;
 }
 
 .inner-level_25 {
     width: 12vh;
     height: 12vh;
+    max-width: 12vw;
+    max-height: 12vw;
+}
+
+.inner-level_6 {
+    width: 29vh;
+    height: 29vh;
+}
+
+.inner-level_12 {
+    width: 12vw;
+    height: 12vw;
+}
+
+.inner-level_21 {
+    width: 10vw;
+    height: 10vw;
+}
+@media screen and (orientation: portrait) {
+    .card-level_6 {
+        width: 50%;
+        height: 33.33333%;
+    }
+
+    .card-level_12 {
+        width: 33.33333%;
+        height: 25%;
+    }
+
+    .card-level_21 {
+        width: 33.33333%;
+        height: 14.28%;
+    }
+
+    .inner-level_6 {
+        width: 35vw;
+        height: 35vw;
+    }
+
+    .inner-level_12 {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .inner-level_21 {
+        width: 8vh;
+        height: 8vh;
+    }
 }
 
 /* Cover */
@@ -54,11 +121,10 @@
     justify-content: center;
 
     color: #fff;
-    font-size: 30px;
 }
 
 .invisible {
-    background-color: #fff;
+    background-color: #222;
 }
 
 .error {
@@ -79,8 +145,8 @@
     outline: none;
 
     background-color: gray;
-    font-size: 2rem;
     font-weight: bold;
+    font-size: 12em;
     color: #fff;
 }
 
@@ -90,15 +156,73 @@
 
 
 .picture-btn.chosen.wrong {
-    background-color: #ff8393;
+    background-color: #fda2b8;
 }
 
 .picture-btn.chosen.right {
-    background-color: #a2ffec;
+    background-color: #61f5d7;
 }
 
 .img {
     display: block;
     width: 100%;
     height: 100%;
+}
+
+/* Media */
+@media screen and (max-width: 3840px) {
+    .picture-btn {
+        font-size: 6em;
+    }
+}
+@media screen and (max-width: 1940px) {
+    .picture-btn {
+        font-size: 3em;
+    }
+}
+@media screen and (max-width: 2600px) {
+    .picture-btn {
+        font-size: 2.4em;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .picture-btn {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .picture-btn {
+        font-size: 1.6em;
+    }
+}
+@media screen and (max-width: 800px) {
+    .picture-btn {
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 640px) {
+    .picture-btn {
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 1080px) and (orientation: portrait) {
+    .inner-level_9 {
+        max-width: 29vw;
+        max-height: 29vw;
+    }
+
+    .inner-level_16 {
+        max-width: 21vw;
+        max-height: 21vw;
+    }
+
+    .inner-level_25 {
+        max-width: 17vw;
+        max-height: 17vw;
+    }
+}
+@media screen and (min-height: 1920px) {
+    .picture-btn {
+        font-size: 3em;
+    }
 }

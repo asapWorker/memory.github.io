@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import './App.css';
 import {Menu} from './components/menu/menu.js'
 import {Game} from './components/game/game'
 import {AppProvider} from "./AppContext";
-import {Result} from "./components/result/result";
+import {Help} from "./components/help/help";
 
 function App() {
     const [page, setPage] = useState({value: 0});
@@ -15,6 +15,8 @@ function App() {
             case 2:
                 setTimeout(() => setPage({...page, value: 1}), 0)
                 return <div/>
+            case 3:
+                return <Help/>
             default:
                 return <Menu/>
         }

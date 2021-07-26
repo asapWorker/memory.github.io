@@ -22,7 +22,43 @@
     position: relative;
     top: 35%;
     transform: translateY(-35%);
-
-    font-size: 160px;
+    font-size: 50em;
     font-weight: bold;
+}
+
+/* Media */
+@media screen and (max-width: 3840px) {
+    .wrap-content {
+        font-size: 35em;
+    }
+}
+@media screen and (max-width: 2600px) {
+    .wrap-content {
+        font-size: 18em;
+    }
+}
+@media screen and (max-width: 1920px) {
+    .wrap-content {
+        font-size: 14em;
+    }
+}
+@media screen and (max-width: 1366px) {
+    .wrap-content {
+        font-size: 9em;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .wrap-content {
+        font-size: 8em;
+    }
+}
+@media screen and (max-width: 800px) {
+    .wrap-content {
+        font-size: 6em;
+    }
+}
+@media screen and (max-width: 640px) {
+    .wrap-content {
+        font-size: 5em;
+    }
 }

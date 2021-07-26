@@ -49,20 +49,16 @@ export function Game() {
     function renderRelevantBtn() {
         if (resultPage === "not-result") {
             return <div className='btn-container'>
-                <button onClick={() => setVision("cleanup")} disabled={disableBtn === "disabled-all"}>Назад</button>
-                <button onClick={restartGame} disabled={disableBtn === "disabled-all"}>Начать заново</button>
-                <button onClick={() => moveToResult()} disabled={disableBtn !== "enable"}>Готово</button>
+                <button className="game-btn" onClick={() => setVision("cleanup")} disabled={disableBtn === "disabled-all"}>Выбрать уровень</button>
+                <button className="game-btn" onClick={restartGame} disabled={disableBtn === "disabled-all"}>Начать заново</button>
+                <button className="game-btn" onClick={() => moveToResult()} disabled={disableBtn !== "enable"}>Готово</button>
             </div>
         }
         return <div className="result-btn-container">
-            <button>Повторить попытку</button>
-            <button onClick={() => pageChanger(0)}>Выбрать уровень</button>
+            <button className="game-btn" onClick={restartGame}>Повторить попытку</button>
+            <button className="game-btn" onClick={() => pageChanger(0)}>Выбрать уровень</button>
         </div>
     }
-
-    useEffect(() => {
-        console.log("Hello");
-    }, [])
 
     useEffect(() => {
         if (vision === 'visible') {
@@ -82,9 +78,9 @@ export function Game() {
     return <GameProvider pictures={pictures.current[0]} answers={pictures.current[1]} result={result} setVision={setVision} vision={vision} wrapVision={wrapVision} disableBtn={disableBtn} setDisableBtn={setDisableBtn}>
         <Wrap/>
         <div className={"game-container " + resultPage}>
-            {(resultPage === "is-result") && <Result/>}
+            {(resultPage === "is-result") && <Result className="result"/>}
             <div className='game-inner'>
-                <CardGrid />
+                <CardGrid/>
                 {(vision === "error") && <div className={"error-wrapper"}>
                     <div className="error-content">Упс... Что-то пошло не так. Проверьте подключение к интернету</div>
                 </div>}
