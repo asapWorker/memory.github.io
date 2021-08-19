@@ -35,7 +35,7 @@
 
 .game-btn {
     height: 6vh;
-    z-index: 1;
+    z-index: 3;
 
     border: none;
     outline: none;
@@ -47,13 +47,16 @@
 
     background-image: linear-gradient(180deg, #61f5d7, #595261);
 }
-.game-btn:hover {
+.game-btn.disabled {
+    opacity: 0.4;
+}
+.game-btn.enabled:hover {
     background: #b6d9fd;;
 }
-.game-btn:focus {
-    background: #b6d9fd;;
+.game-btn.enabled:focus {
+    background: #b6d9fd;
 }
-.game-btn:active {
+.game-btn.enabled:active {
     opacity: 0.7;
 }
 
@@ -135,7 +138,7 @@
     margin: auto;
     font-size: 2rem;
     font-weight: bold;
-    color: #5a5b63;
+    color: #c3c3c7;
 }
 
 /* Media */

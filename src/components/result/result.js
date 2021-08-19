@@ -7,8 +7,7 @@ export function Result() {
 
     return <div className="result-container">
         <div className="results-box">
-            <div className="current-result">Текущий результат: <span>{result.current}%</span></div>
-            <div className="best-result">Лучший результат: <span>100%</span></div>
+            <div className="current-result">Результат: <span>{result.current}%</span></div>
         </div>
     </div>
 }

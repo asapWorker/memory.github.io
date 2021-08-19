@@ -37,6 +37,8 @@
     color: #2030d0;
 }
 .btn:active {
+    background: #b6d9fd;
+    color: #2030d0;
     opacity: 0.6;
 }
 .btn-level {
@@ -57,10 +59,7 @@
 }
 
 .btn-help {
-    background-image: linear-gradient(180deg, #61f5d7, #5c5258);
-}
-.btn-result {
-    background-image: linear-gradient(180deg, #ffa7b4, #5a5b63);
+    background-image: linear-gradient(180deg, #61f5d7, #4c4d60);
 }
 
 /* Indicator */

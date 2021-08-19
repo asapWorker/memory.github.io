@@ -12,12 +12,22 @@ export function usePageState() {
     return page;
 }
 
-export function AppProvider({children, page, setPage}) {
+export function useTargetElements() {
+    const {targetElements} = useContext(AppContext);
+    return targetElements;
+}
+
+export function useAssistant() {
+    const {assistant} = useContext(AppContext);
+    return assistant;
+}
+
+export function AppProvider({children, page, setPage, targetElements, assistant}) {
     function changePage(state) {
         setPage(state);
     }
 
-    return <AppContext.Provider value={{page, changePage}}>
+    return <AppContext.Provider value={{page, changePage, targetElements, assistant}}>
         {children}
     </AppContext.Provider>
 }

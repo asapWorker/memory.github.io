@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, {useRef} from 'react'
 import './card-grid.css'
 import {usePageState} from "../../AppContext";
 import {Card} from "../card/card";

@@ -123,12 +123,16 @@
     color: #fff;
 }
 
-.invisible {
+.invisible-img {
+    background-color: #222;
+}
+
+.ready {
     background-color: #222;
 }
 
 .error {
-    background-color: #cccccc;
+    background-color: #2c2c2f;
     color: transparent;
 }
 
@@ -148,6 +152,10 @@
     font-weight: bold;
     font-size: 12em;
     color: #fff;
+}
+
+.picture-btn:focus {
+    background-color: #5a5b63;
 }
 
 .picture-btn.active:hover {

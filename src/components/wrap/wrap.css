@@ -9,7 +9,7 @@
 
 .covered {
     background-color: rgba(10,10,33,0.5);
-    z-index: 1000;
+    z-index: 2;
     color: #fff;
 }
 

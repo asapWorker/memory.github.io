@@ -42,8 +42,18 @@ export function useBtnState() {
     return disableBtn;
 }
 
-export function GameProvider({children, pictures, answers, result, setVision, vision, wrapVision, disableBtn, setDisableBtn}) {
-    return <GameContext.Provider value={{pictures, answers, result, setVision, vision, wrapVision, disableBtn, setDisableBtn}}>
+export function useButtonsRefs() {
+    const {buttonsRefs} = useContext(GameContext);
+    return buttonsRefs;
+}
+
+export function useDeleteWrapTimeout() {
+    const {deleteWrapTimeout} = useContext(GameContext);
+    return deleteWrapTimeout;
+}
+
+export function GameProvider({children, pictures, answers, result, setVision, vision, wrapVision, disableBtn, setDisableBtn, buttonsRefs, deleteWrapTimeout}) {
+    return <GameContext.Provider value={{pictures, answers, result, setVision, vision, wrapVision, disableBtn, setDisableBtn, buttonsRefs, deleteWrapTimeout}}>
         {children}
     </GameContext.Provider>
 }
