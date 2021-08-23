@@ -10,7 +10,7 @@ import {reducer} from "./reducer";
 const initializeAssistant = (getState) => {
     if (process.env.NODE_ENV === "development") {
         return createSmartappDebugger({
-            token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZTFmNTQxODM0NzEwNjkyNzAzM2QwYTQ0ODFmMTNkNTJiMTA1N2NhMWNkY2I0OTg0ZGNiMWQxZjQzMzdhMzYyNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyOTQ3NDE4NywiaWF0IjoxNjI5Mzg3Nzc3LCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiN2EzYmYyZTAtNjdiMy00N2JiLWJiZmQtZjIzNWZmMzQ4OTFkIiwic2lkIjoiOWQ4MzI3ZmMtZGUwMC00MmU3LWJjNWUtYmYwZTcyOTdiNzJkIn0.YCNkHB9BGF4FTDxSHJkCWQSi7hb_Hdnip29XNWe0DACgHS_9I3Ez4hbveEzO1ugKG9Ftnv52Z5F7-MK36_qEMrA0-fP1qJYezEtBX780C4f1uHhZ4YQ8O3IPKXRPuPNXd8eLelJbVl7-1YhyB3VDMIUDboZiR4uu6XpdWj75hkzB3gyyxO778GJVi7DRr4Ot2uWRZRaEWVUA5WY-_tLmw2JN5ucI0yd6xHRfwN9--dORRNX6rlS8OCIH3Z6ELoIrsIyiNdyvogJkz6WT57tRqrVDhbR4ZNFhZyb3skj6AePlofzQHPF9RG7TcIs9UmqMj2A2pg9RLfRvqxOuchRrHkD-k4o7MmV5407kYWB8YHCHBqQrYA-2HfzW1Djvvl9HofNigy3AnC3MsLzzAHbpkV6Z7cOmhQ0CLhtgexiKWhLdYDk8U35t1Kpo6dPbdt-KT7tompTSvWr4SXMrrrhDHwiHh2URqv-8KfNFUzHGo7EHabYHQ0rexoXO2E6Pl2xuQo84yIKcZVMGmyWLy4sx8OMgXhYKPpGC4cyNvhBpKA_bQ6zje1ftYwUFFcQedVqNir6o1nCndWPNsgqK5PReugJyD-kooPPgpfkkm-VX4HNNU2ZPSAJMZc1SaUo81DHTz5j82fNVaRZNrfZzVjYgNEBiMTgeEGOcZScG8-K1POE",
+            token: "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZTFmNTQxODM0NzEwNjkyNzAzM2QwYTQ0ODFmMTNkNTJiMTA1N2NhMWNkY2I0OTg0ZGNiMWQxZjQzMzdhMzYyNTM5YmU5MjcwMDQyNjI5OCIsImF1ZCI6IlZQUyIsImV4cCI6MTYyOTcwOTM1MSwiaWF0IjoxNjI5NjIyOTQxLCJpc3MiOiJLRVlNQVNURVIiLCJ0eXBlIjoiQmVhcmVyIiwianRpIjoiNzIyZmI2ZGUtYmYxYS00N2NhLTlhNTMtZmRmYWQ3MWNiZWNkIiwic2lkIjoiNmRlZmM2YmItZDRiYS00YTc5LTgwNjMtMzg1MGI0ODYyZjM1In0.aufncU-hLIUmdbmbThlHvS3lSSYBZw-IuQFenx6IvjeTGEt9d5_A_jV5fhFWiOVQO7W5Bgj_b8Ddm8o5Xo_LlSPEB9LfK7btySeO0M4B2TWJwt_chTFDL3nf4URk1NO6G1rOINHMCUxHEhDBO-umTi5WWK55xru8YYhTRLbX3YatTXyEEFs-QK4-cScrEaAWRUSpXPfc9k5TWOWPEckycxQXtQ3f7tpDtpmaJ3yfc2w7M5lNqbY_ZZtUiYmHBB8UiZv-IETh_lPFWwTqcDkBo6AwfZyaUr6xfPwGdgu8pX88JruYDrZo1ZSbQj_uuBj_N5ne4WX9MMliQDKXPix_mYmuebxw5rXS8-QWj9oXL-A0aMYVdhce1s-xol2KA59Bdn1kFkzAk6sWP31BX0yV8OfuL3DArmz8CYFrUjg3BGQ3878WH4ftxTefyen8o8kmF9lzjmQDvJMbUK9B9tdl64YWTS9ePajYb-yuP7pCAfjRpEvSiP3-3FYocOArP7PiE8CrrZIXJLi2T7uvHg3NbE_1jCJ0V32mxxAaOeAeojVQEaXOnZpWuANN8sPiMJsyysRcCr9XuqgwMvGpINlM1MD8Qy4wTSuvyBxBQYLfRMBulAq_D4hF1W1jgSuoQGqos9VGiOCoDTvJyEX2mhTX6D0avCRUFeVhZkIT6iSwSFk",
             initPhrase: `Запусти тренажер памяти`,
             getState,
         });
@@ -45,6 +45,9 @@ function App() {
             if (appState.value < 0) {
                 const position = targetElementsRefs.current.length + appState.value;
                 targetElementsRefs.current[position].current.click();
+                if (appState.value === -3 && targetElementsRefs.current[position].current.disabled) {
+                    assistantRef.current.sendData({action: {action_id: "ready_disabled"}});
+                }
             } else if (appState.environment === "card") {
                 const length = targetElementsRefs.current.length;
                 if (appState.value > length - 5) {

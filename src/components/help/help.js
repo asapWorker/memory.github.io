@@ -9,6 +9,14 @@ import {
 
 export function Help() {
     const [helpPage, setHelpPage] = useState(0);
+    /* For help pictures */
+    const [helpImg, setHelpImg] = useState()
+    function makeLink(number) {
+        return `https://memory-game-help.s3.eu-north-1.amazonaws.com/${number}.jpeg`
+    }
+    /* Flag for pictures loading */
+    const [visibility, setVisibility] = useState("invisible");
+
     const [buttonsVisibility, setButtonsVisibility] = useState(["disabled", "enabled"]);
     /* Refs storage for remote controller events Collection */
     const buttonsRefs = useRef([useRef(), useRef(), useRef()]);
@@ -78,7 +86,7 @@ export function Help() {
                 moveByRemoteController = wrapMoveByRemoteController(3, 2, setFocusPosition, refsStatus.current);
                 document.addEventListener("keydown", moveByRemoteController);
                 break;
-            case 2:
+            case 5:
                 setButtonsVisibility(["enabled", "disabled"]);
                 refsStatus.current = [true, true, false];
                 /* Get function for remote controller */
@@ -86,15 +94,30 @@ export function Help() {
                 document.addEventListener("keydown", moveByRemoteController);
                 break;
         }
-
+        setHelpImg(makeLink(helpPage + 1));
         return () => {
             document.removeEventListener("keydown", moveByRemoteController);
         }
     }, [helpPage])
 
-    return <div className="btn-container">
-        <button ref={buttonsRefs.current[0]} className={"game-btn enabled"} onClick={helpHandler("menu")}>Вернуться к меню</button>
-        <button ref={buttonsRefs.current[1]} disabled={buttonsVisibility[0] === "disabled"} className={"game-btn " + buttonsVisibility[0]} onClick={helpHandler("back")}>Предыдущая</button>
-        <button ref={buttonsRefs.current[2]} disabled={buttonsVisibility[1] === "disabled"} className={"game-btn " + buttonsVisibility[1]} onClick={helpHandler("next")}>Следующая</button>
+    return <div className={"help_container"}>
+        <div className="help_img_wrapper">
+            {(visibility === "invisible") && <div className="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>}
+            <img className={"help_img " + visibility} src={helpImg} alt="Help_img" onLoad={() => setVisibility("visible")}/>
+        </div>
+        <div className="btn-container">
+            <button ref={buttonsRefs.current[0]} className={"game-btn enabled"} onClick={helpHandler("menu")}>Вернуться к меню</button>
+            <button ref={buttonsRefs.current[1]} disabled={buttonsVisibility[0] === "disabled"} className={"game-btn " + buttonsVisibility[0]} onClick={helpHandler("back")}>Предыдущая</button>
+            <button ref={buttonsRefs.current[2]} disabled={buttonsVisibility[1] === "disabled"} className={"game-btn " + buttonsVisibility[1]} onClick={helpHandler("next")}>Следующая</button>
+        </div>
     </div>
 }

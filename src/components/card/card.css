@@ -183,14 +183,19 @@
         font-size: 6em;
     }
 }
+@media screen and (max-width: 2600px) {
+    .picture-btn {
+        font-size: 2.4em;
+    }
+}
 @media screen and (max-width: 1940px) {
     .picture-btn {
         font-size: 3em;
     }
 }
-@media screen and (max-width: 2600px) {
+@media screen and (min-height: 1920px) and (max-width: 3840px) {
     .picture-btn {
-        font-size: 2.4em;
+        font-size: 3em;
     }
 }
 @media screen and (max-width: 1366px) {
@@ -227,10 +232,5 @@
     .inner-level_25 {
         max-width: 17vw;
         max-height: 17vw;
-    }
-}
-@media screen and (min-height: 1920px) {
-    .picture-btn {
-        font-size: 3em;
     }
 }

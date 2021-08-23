@@ -154,8 +154,6 @@ export function Game(setPage) {
         if (disableBtn === "enable") {
             /* set state for pictures + 3 buttons for remove controller */
             setRemoteController(2);
-            /* Change assistant state */
-            assistant.current.sendData({action: {action_id: "can_chose_ready"}});
         }
     }, [disableBtn])
 

@@ -35,3 +35,13 @@
         width: 80vw;
     }
 }
+@media screen and (orientation: portrait) {
+    .grid {
+        height: 75vh;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 800px) {
+    .game-container {
+        height: 72vh;
+    }
+}
