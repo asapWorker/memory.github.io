@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory.github.io/static/css/main.6e5ee5fc.chunk.css",
+    "main.css": "/memory.github.io/static/css/main.2b223100.chunk.css",
     "main.js": "/memory.github.io/static/js/main.96a1a2ad.chunk.js",
     "main.js.map": "/memory.github.io/static/js/main.96a1a2ad.chunk.js.map",
     "runtime-main.js": "/memory.github.io/static/js/runtime-main.ca4841ab.js",
@@ -8,13 +8,13 @@
     "static/js/2.cfb8786c.chunk.js": "/memory.github.io/static/js/2.cfb8786c.chunk.js",
     "static/js/2.cfb8786c.chunk.js.map": "/memory.github.io/static/js/2.cfb8786c.chunk.js.map",
     "index.html": "/memory.github.io/index.html",
-    "static/css/main.6e5ee5fc.chunk.css.map": "/memory.github.io/static/css/main.6e5ee5fc.chunk.css.map",
+    "static/css/main.2b223100.chunk.css.map": "/memory.github.io/static/css/main.2b223100.chunk.css.map",
     "static/js/2.cfb8786c.chunk.js.LICENSE.txt": "/memory.github.io/static/js/2.cfb8786c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.ca4841ab.js",
     "static/js/2.cfb8786c.chunk.js",
-    "static/css/main.6e5ee5fc.chunk.css",
+    "static/css/main.2b223100.chunk.css",
     "static/js/main.96a1a2ad.chunk.js"
   ]
 }
