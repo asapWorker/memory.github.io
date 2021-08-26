@@ -216,14 +216,14 @@
         font-size: 0.6em;
     }
 }
-@media screen and (orientation: landscape) and (max-height: 800px) {
+@media screen and (orientation: landscape) and (max-width: 1920px) {
     .game-container {
-        height: 80vh;
+        height: 73vh;
     }
 }
 
 @media screen and (orientation: portrait) {
     .game-container {
-        height: 85vh;
+        height: 76vh;
     }
 }

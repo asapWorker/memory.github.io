@@ -95,13 +95,13 @@
     }
 
     .inner-level_6 {
-        width: 35vw;
-        height: 35vw;
+        width: 21vh;
+        height: 21vh;
     }
 
     .inner-level_12 {
-        width: 25vw;
-        height: 25vw;
+        width: 12vh;
+        height: 12vh;
     }
 
     .inner-level_21 {
@@ -232,5 +232,39 @@
     .inner-level_25 {
         max-width: 17vw;
         max-height: 17vw;
+    }
+}
+@media screen and (orientation: landscape) and (max-width: 1920px) {
+    .inner-level_9 {
+        width: 19vh;
+        height: 19vh;
+    }
+
+    .inner-level_16 {
+        width: 14vh;
+        height: 14vh;
+    }
+
+    .inner-level_25 {
+        width: 11vh;
+        height: 11vh;
+    }
+    .inner-level_6 {
+        width: 29vh;
+        height: 29vh;
+    }
+
+    .inner-level_12 {
+        width: 12vw;
+        height: 12vw;
+        max-width: 26vh;
+        max-height: 26vh;
+    }
+
+    .inner-level_21 {
+        width: 10vw;
+        height: 10vw;
+        max-width: 19vh;
+        max-height: 19vh;
     }
 }
