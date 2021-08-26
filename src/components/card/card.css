@@ -236,18 +236,18 @@
 }
 @media screen and (orientation: landscape) and (max-width: 1920px) {
     .inner-level_9 {
-        width: 19vh;
-        height: 19vh;
+        width: 20vh;
+        height: 20vh;
     }
 
     .inner-level_16 {
-        width: 14vh;
-        height: 14vh;
+        width: 15vh;
+        height: 15vh;
     }
 
     .inner-level_25 {
-        width: 11vh;
-        height: 11vh;
+        width: 12vh;
+        height: 12vh;
     }
     .inner-level_6 {
         width: 29vh;

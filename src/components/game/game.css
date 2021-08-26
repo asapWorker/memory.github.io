@@ -218,7 +218,7 @@
 }
 @media screen and (orientation: landscape) and (max-width: 1920px) {
     .game-container {
-        height: 73vh;
+        height: 76vh;
     }
 }
 
